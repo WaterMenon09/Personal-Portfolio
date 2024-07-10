@@ -16,7 +16,7 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Machine Learning Enthusiast",
+		title: "Software & Machine Learning Enthusiast",
 		description:
 			"I'm a final-year Computer Science and Engineering student at North South University, with a strong passion for software development and machine learning. My current focus is on developing a real-time antivirus ML model for network security, reflecting my deep interest in privacy and cybersecurity. This project showcases my commitment to creating innovative solutions that address real-world problems. You can explore my projects and contributions on GitHub. I'm always eager to connect with fellow tech enthusiasts and professionals, so feel free to reach out!",
 	},
