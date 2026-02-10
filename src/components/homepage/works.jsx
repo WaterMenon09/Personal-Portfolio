@@ -14,19 +14,19 @@ const Works = () => {
 				body={
 					<div className="works-body">
 						<div className="work">
-							<div className="work-title">Intelligent Machines</div>
+							<div className="work-title">Cloudly IO</div>
 							<div className="work-subtitle">
-								Junior Quality Assurance Analyst
+								Artificial Intelligence Engineer
 							</div>
-							<div className="work-duration">Oct 2020 - Mar 2022</div>
+							<div className="work-duration">Feb 2025 - Present</div>
 						</div>
 
 						<div className="work">
-							<div className="work-title">Intelligent Machines</div>
+							<div className="work-title">Cloudly IO</div>
 							<div className="work-subtitle">
-								Annotation Team Lead
+								AI/ML Research Intern
 							</div>
-							<div className="work-duration">Aug 2019 - Sept 2020</div>
+							<div className="work-duration">Aug 2024 - Jan 2025</div>
 						</div>
 					</div>
 				}

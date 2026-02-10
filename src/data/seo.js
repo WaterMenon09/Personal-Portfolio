@@ -2,14 +2,14 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I'm a final-year Computer Science and Engineering student at North South University, with a strong passion for software development and machine learning",
+			"I\u2019m an Artificial Intelligence Engineer at Cloudly IO, with a BSc in Computer Science and Engineering from North South University. I specialize in AI/ML solutions, software development, and cybersecurity, building innovative technologies that solve real-world problems. I\u2019m passionate about leveraging machine learning and data-driven approaches to create impactful solutions.",
 		keywords: ["Menon Pranto", "Menon", "Pranto"],
 	},
 
 	{
 		page: "about",
 		description:
-			"I'm a final-year Computer Science and Engineering student at North South University, with a strong passion for software development and machine learning",
+			"I\u2019m an Artificial Intelligence Engineer at Cloudly IO, with a BSc in Computer Science and Engineering from North South University. I specialize in AI/ML solutions, software development, and cybersecurity, building innovative technologies that solve real-world problems. I\u2019m passionate about leveraging machine learning and data-driven approaches to create impactful solutions.",
 		keywords: ["Menon Pranto", "Menon", "Pranto"],
 	},
 
