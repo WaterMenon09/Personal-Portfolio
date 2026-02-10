@@ -3,7 +3,7 @@ const INFO = {
 		title: "Menon Pranto | Portfolio",
 		name: "Menon Pranto.",
 		email: "menonpranto@gmail.com",
-		logo: "../logo.png",
+		logo: process.env.PUBLIC_URL + "/logo.png",
 	},
 
 	socials: {
