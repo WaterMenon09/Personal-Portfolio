@@ -69,6 +69,43 @@
 	display: none;
 }
 
+.about-after-title {
+	display: flex;
+	gap: 30px;
+	align-items: stretch;
+	padding-top: 30px;
+}
+
+.about-works {
+	flex: 1;
+}
+
+.about-skills {
+	flex: 1;
+}
+
+.about-works .works,
+.about-skills .skills {
+	height: 100%;
+}
+
+.about-works .card,
+.about-skills .card {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+	.about-after-title {
+		flex-direction: column;
+	}
+
+	.about-works .card,
+	.about-skills .card {
+		height: auto;
+	}
+}
+
 @media (max-width: 1024px) {
 	.about-logo {
 		z-index: 100;
