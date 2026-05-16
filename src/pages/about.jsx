@@ -5,6 +5,8 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
+import Works from "../components/homepage/works";
+import Skills from "../components/about/skills";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -54,8 +56,8 @@ const About = () => {
 								<div className="about-image-container">
 									<div className="about-image-wrapper">
 										<img
-											src="about.jpg"
-											alt="about"
+											src={process.env.PUBLIC_URL + "/about.jpg"}
+											alt="Menon Pranto"
 											className="about-image"
 										/>
 									</div>
@@ -68,6 +70,14 @@ const About = () => {
 						</div>
 						<div className="about-socials-mobile">
 							<Socials />
+						</div>
+						<div className="about-after-title">
+							<div className="about-works">
+								<Works />
+							</div>
+							<div className="about-skills">
+								<Skills />
+							</div>
 						</div>
 					</div>
 					<div className="page-footer">

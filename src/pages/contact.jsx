@@ -45,35 +45,21 @@ const Contact = () => {
 
 						<div className="subtitle contact-subtitle">
 							Thank you for your interest in getting in touch with
-							me. I welcome your feedback, questions, and
-							suggestions. If you have a specific question or
-							comment, please feel free to email me directly at
-							&nbsp;{" "}
+							me. I welcome feedback, questions, and collaboration
+							requests. The fastest way to reach me is email
+							directly at&nbsp;{" "}
 							<a href={`mailto:${INFO.main.email}`}>
 								{INFO.main.email}
 							</a>
 							. I make an effort to respond to all messages within
-							24 hours. Finally, if you prefer to connect on
-							social media, you can find me on The the media's below.
-							so don't hesitate to reach out.
-							Thanks again for your interest, and I look forward
-							to hearing from you!
+							24 hours. I'm also active on the socials below—feel
+							free to ping me about ML/AI roles, Maveric, or O-RAN.
 						</div>
 					</div>
 
 					<div className="socials-container">
 						<div className="contact-socials">
 							<Socials />
-						</div>
-						<div className="contact-socials">
-							<div className="subtitle contact-subtitle">
-								Below is my Address:<h4>
-									{INFO.socials.Address}
-								</h4> & This is my Phone Number:
-								<h4>
-									{INFO.socials.Number}
-								</h4>
-							</div>
 						</div>
 					</div>
 

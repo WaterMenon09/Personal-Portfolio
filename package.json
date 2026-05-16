@@ -1,11 +1,11 @@
 {
-	"name": "reactfolio",
+	"name": "personal-portfolio",
 	"version": "1.1.0",
-	"description": "Personal portfolio template built using Reactjs",
+	"description": "Personal portfolio of Menon Pranto — AI/ML Engineer",
 	"author": {
-		"name": "Tharindu N. Madhusanka",
-		"email": "mail@tharindu.dev",
-		"url": "https://tharindu.dev"
+		"name": "Menon Pranto",
+		"email": "menonpranto@gmail.com",
+		"url": "https://watermenon09.github.io/Personal-Portfolio"
 	},
 	"license": "MIT",
 	"homepage": "https://WaterMenon09.github.io/Personal-Portfolio",
@@ -25,8 +25,7 @@
 		"react-helmet": "^6.1.0",
 		"react-router-dom": "^6.11.1",
 		"react-scripts": "5.0.1",
-		"styled-components": "^5.3.10",
-		"web-vitals": "^2.1.4"
+"web-vitals": "^2.1.4"
 	},
 	"scripts": {
 		"start": "react-scripts start",

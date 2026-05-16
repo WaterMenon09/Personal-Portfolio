@@ -2,29 +2,74 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I\u2019m an Artificial Intelligence Engineer at Cloudly IO, with a BSc in Computer Science and Engineering from North South University. I specialize in AI/ML solutions, software development, and cybersecurity, building innovative technologies that solve real-world problems. I\u2019m passionate about leveraging machine learning and data-driven approaches to create impactful solutions.",
-		keywords: ["Menon Pranto", "Menon", "Pranto"],
+			"Menon Pranto — AI/ML Engineer at Cloudly IO, core contributor to Maveric (LF Connectivity, Meta-backed, Nvidia-partnered). Builds RL agents, Bayesian digital twins, and LangGraph/RAG platforms for AI-native 5G/6G networks.",
+		keywords: [
+			"Menon Pranto",
+			"Khandaker Menon Zaman Pranto",
+			"AI Engineer",
+			"ML Engineer",
+			"Reinforcement Learning",
+			"O-RAN",
+			"5G",
+			"6G",
+			"LangGraph",
+			"RAG",
+			"Bayesian Digital Twin",
+			"Maveric",
+			"Cloudly IO",
+			"Linux Foundation Connectivity",
+		],
 	},
 
 	{
 		page: "about",
 		description:
-			"I\u2019m an Artificial Intelligence Engineer at Cloudly IO, with a BSc in Computer Science and Engineering from North South University. I specialize in AI/ML solutions, software development, and cybersecurity, building innovative technologies that solve real-world problems. I\u2019m passionate about leveraging machine learning and data-driven approaches to create impactful solutions.",
-		keywords: ["Menon Pranto", "Menon", "Pranto"],
+			"About Menon Pranto — AI/ML Engineer building production RL agents and Bayesian digital twins for AI-native 5G/6G RAN optimization at Cloudly IO and LF Connectivity.",
+		keywords: [
+			"Menon Pranto",
+			"AI/ML Engineer",
+			"O-RAN",
+			"Maveric",
+			"Stable-Baselines3",
+			"GPyTorch",
+			"FastAPI",
+			"Kafka",
+			"LangGraph",
+			"pgvector",
+			"Cloudly IO",
+		],
 	},
 
 	{
 		page: "projects",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Menon Pranto", "Menon", "Pranto"],
+			"Projects by Menon Pranto: Maveric rApp Service (45–55% ping-pong reduction), Bayesian Digital Twin Engine, 3GPP Data Simulator, Cloudly Copilot (LangGraph + pgvector), MalwareSentinel, and more.",
+		keywords: [
+			"Menon Pranto",
+			"Maveric",
+			"rApp",
+			"Bayesian Digital Twin",
+			"LangGraph",
+			"pgvector",
+			"MalwareSentinel",
+			"O-RAN",
+			"5G",
+			"open source",
+		],
 	},
 
 	{
 		page: "contact",
 		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Menon Pranto", "Menon", "Pranto"],
+			"Get in touch with Menon Pranto — AI/ML Engineer at Cloudly IO. Available for ML/AI roles, O-RAN discussions, and open-source collaboration.",
+		keywords: [
+			"Menon Pranto",
+			"contact",
+			"AI Engineer",
+			"ML Engineer",
+			"hire",
+			"collaborate",
+		],
 	},
 ];
 

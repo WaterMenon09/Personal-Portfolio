@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faLevelUp, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faGithub,
@@ -12,6 +12,7 @@ import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import Works from "../components/homepage/works";
+import Skills from "../components/about/skills";
 import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
@@ -100,7 +101,7 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="homepage.jpg"
+											src={process.env.PUBLIC_URL + "/homepage.jpg"}
 											alt="about"
 											className="homepage-image"
 										/>
@@ -133,12 +134,12 @@ const Homepage = () => {
 								</div>
 							</a>
 							<a
-								href={INFO.socials.stackoverflow}
+								href={INFO.socials.leetcode}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faLevelUp}
+									icon={faCode}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -161,6 +162,9 @@ const Homepage = () => {
 						<div className="homepage-after-title">
 							<div className="homepage-works">
 								<Works />
+							</div>
+							<div className="homepage-skills">
+								<Skills />
 							</div>
 						</div>
 

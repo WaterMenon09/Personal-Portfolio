@@ -26,7 +26,7 @@ const Footer = () => {
 
 				<div className="footer-credits">
 					<div className="footer-credits-text">
-						© 2024 Menon Pranto. All Rights Reserved.
+						© {new Date().getFullYear()} Menon Pranto. All Rights Reserved.
 					</div>
 				</div>
 			</div>
