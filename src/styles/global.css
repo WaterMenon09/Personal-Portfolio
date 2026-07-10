@@ -56,6 +56,17 @@ code, pre { font-family: var(--font-mono); }
   @keyframes blink { to { visibility: hidden; } }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .timeline .entry { opacity: 0; transform: translateY(8px); transition: opacity 200ms ease-out, transform 200ms ease-out; }
+  .timeline .entry.in-view { opacity: 1; transform: none; }
+}
+.toast {
+  position: fixed; bottom: 1.25rem; left: 50%; transform: translateX(-50%);
+  max-width: min(92vw, 46rem); padding: 0.75rem 1.25rem; z-index: 50;
+  background: var(--bg-2); border: 1px solid var(--accent); border-radius: 6px;
+  font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-1);
+}
+
 .syn-comment { color: var(--syn-comment); font-style: italic; }
 .syn-str { color: var(--syn-string); }
 .syn-doc { font-style: italic; }

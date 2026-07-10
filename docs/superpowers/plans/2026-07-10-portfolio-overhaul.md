@@ -946,7 +946,7 @@ import { withBase } from "../utils/url";
 - Modify: `src/scripts/enhancements.ts` (replace the empty stub from Task 4)
 - Modify: `src/styles/global.css` (append `.reveal` + toast styles)
 
-- [ ] **Step 1:** Replace `src/scripts/enhancements.ts`:
+- [x] **Step 1:** Replace `src/scripts/enhancements.ts`:
 
 ```ts
 // Timeline reveal — the only IntersectionObserver on the site.
@@ -985,7 +985,7 @@ window.addEventListener("keydown", (e) => {
 export {};
 ```
 
-- [ ] **Step 2:** Append to `src/styles/global.css`:
+- [x] **Step 2:** Append to `src/styles/global.css`:
 
 ```css
 @media (prefers-reduced-motion: no-preference) {
@@ -1000,8 +1000,8 @@ export {};
 }
 ```
 
-- [ ] **Step 3:** Verify in dev: timeline entries fade in with stagger on scroll; konami code shows toast + flips header to `main ✗ cheats-enabled`; with DevTools reduced-motion emulation, entries are fully visible immediately and nothing animates. Confirm `dist/_astro/` gains exactly one small JS file on build.
-- [ ] **Step 4:** Commit: `git commit -am "feat: timeline reveal and konami achievement toast"`
+- [x] **Step 3:** Verify in dev: timeline entries fade in with stagger on scroll; konami code shows toast + flips header to `main ✗ cheats-enabled`; with DevTools reduced-motion emulation, entries are fully visible immediately and nothing animates. Confirm `dist/_astro/` gains exactly one small JS file on build.
+- [x] **Step 4:** Commit: `git commit -am "feat: timeline reveal and konami achievement toast"`
 
 ### Task 10: SEO plumbing — JSON-LD, robots.txt, sitemap check
 
