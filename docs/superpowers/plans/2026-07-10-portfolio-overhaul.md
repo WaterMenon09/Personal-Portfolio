@@ -1008,7 +1008,7 @@ export {};
 **Files:**
 - Modify: `src/pages/index.astro` (JSON-LD), `public/robots.txt` (replace)
 
-- [ ] **Step 1:** Add to `src/pages/index.astro` (inside BaseLayout slot, anywhere top-level):
+- [x] **Step 1:** Add to `src/pages/index.astro` (inside BaseLayout slot, anywhere top-level):
 
 ```astro
   <script type="application/ld+json" is:inline set:html={JSON.stringify({
@@ -1024,7 +1024,7 @@ export {};
   })} />
 ```
 
-- [ ] **Step 2:** Replace `public/robots.txt`:
+- [x] **Step 2:** Replace `public/robots.txt`:
 
 ```
 User-agent: *
@@ -1033,8 +1033,8 @@ Allow: /
 Sitemap: https://watermenon09.github.io/Personal-Portfolio/sitemap-index.xml
 ```
 
-- [ ] **Step 3:** Verify: `npm run build`; `cat dist/sitemap-0.xml` → every `<loc>` starts `https://watermenon09.github.io/Personal-Portfolio/` (known site+base footgun — if base is missing, entries are wrong: fix before proceeding); `grep -c 'application/ld+json' dist/index.html` → 1.
-- [ ] **Step 4:** Commit: `git commit -am "feat: JSON-LD person schema, robots.txt with sitemap"`
+- [x] **Step 3:** Verify: `npm run build`; `cat dist/sitemap-0.xml` → every `<loc>` starts `https://watermenon09.github.io/Personal-Portfolio/` (known site+base footgun — if base is missing, entries are wrong: fix before proceeding); `grep -c 'application/ld+json' dist/index.html` → 1.
+- [x] **Step 4:** Commit: `git commit -am "feat: JSON-LD person schema, robots.txt with sitemap"`
 
 ### Task 11: OG image + phone-stripped resume
 

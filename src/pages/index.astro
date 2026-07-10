@@ -45,6 +45,17 @@ const bioHtml = `<span class="syn-str syn-doc">"""${SITE.heroBio.doc}"""</span>\
     <h2 class="section-title" id="skills-h">skills</h2>
     <SkillGroups />
   </section>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.name,
+    alternateName: SITE.fullName,
+    jobTitle: "AI/ML Engineer",
+    worksFor: { "@type": "Organization", name: "Cloudly IO" },
+    email: `mailto:${SITE.email}`,
+    url: "https://watermenon09.github.io/Personal-Portfolio/",
+    sameAs: [SITE.socials.github, SITE.socials.linkedin, SITE.socials.leetcode],
+  })} />
 </BaseLayout>
 <style>
   .hero { padding-top: clamp(3rem, 7vh, 5rem); }
