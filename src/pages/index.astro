@@ -1,3 +1,7 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SEO } from "../data/seo";
 ---
-<html lang="en"><head><title>Menon Pranto</title></head><body><h1>scaffold ok</h1></body></html>
+<BaseLayout title={SEO.home.title} description={SEO.home.description}>
+  <h1>shell ok</h1>
+</BaseLayout>

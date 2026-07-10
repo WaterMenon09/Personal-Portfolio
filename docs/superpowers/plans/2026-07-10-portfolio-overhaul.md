@@ -375,7 +375,7 @@ code, pre { font-family: var(--font-mono); }
 - Consumes: `withBase`, `SITE`, tokens from Task 3.
 - Produces: `<BaseLayout title description ogImage?>` slot wrapper used by every page; `<Socials />`.
 
-- [ ] **Step 1:** Create `src/components/BaseHead.astro`:
+- [x] **Step 1:** Create `src/components/BaseHead.astro`:
 
 ```astro
 ---
@@ -404,7 +404,7 @@ const ogImageAbs = new URL(ogImage, Astro.site);
 <meta name="twitter:image" content={ogImageAbs} />
 ```
 
-- [ ] **Step 2:** Create `src/layouts/BaseLayout.astro`:
+- [x] **Step 2:** Create `src/layouts/BaseLayout.astro`:
 
 ```astro
 ---
@@ -448,7 +448,7 @@ const { title, description, ogImage } = Astro.props;
 
 (Note: `src/scripts/enhancements.ts` is created in Task 9 — create an empty file `export {};` in this task so the build passes.)
 
-- [ ] **Step 3:** Create `src/components/NavBar.astro`:
+- [x] **Step 3:** Create `src/components/NavBar.astro`:
 
 ```astro
 ---
@@ -490,7 +490,7 @@ const links = [
 </style>
 ```
 
-- [ ] **Step 4:** Create `src/components/Socials.astro`:
+- [x] **Step 4:** Create `src/components/Socials.astro`:
 
 ```astro
 ---
@@ -513,7 +513,7 @@ const entries = [
 </style>
 ```
 
-- [ ] **Step 5:** Create `src/components/Footer.astro`:
+- [x] **Step 5:** Create `src/components/Footer.astro`:
 
 ```astro
 ---
@@ -536,7 +536,7 @@ import Socials from "./Socials.astro";
 </style>
 ```
 
-- [ ] **Step 6:** Update stub `src/pages/index.astro` to use the layout:
+- [x] **Step 6:** Update stub `src/pages/index.astro` to use the layout:
 
 ```astro
 ---
@@ -548,8 +548,8 @@ import { SEO } from "../data/seo";
 </BaseLayout>
 ```
 
-- [ ] **Step 7:** Verify: `npm run build` exits 0. `grep -o '<meta property="og:url" content="[^"]*"' dist/index.html` → contains `/Personal-Portfolio/`. `grep -c 'googletagmanager' dist/index.html` → 1 (prod build). Dev page renders header/footer.
-- [ ] **Step 8:** Commit: `git commit -am "feat: site shell — BaseHead SEO, layout, titlebar nav, terminal footer"`
+- [x] **Step 7:** Verify: `npm run build` exits 0. `grep -o '<meta property="og:url" content="[^"]*"' dist/index.html` → contains `/Personal-Portfolio/`. `grep -c 'googletagmanager' dist/index.html` → 1 (prod build). Dev page renders header/footer.
+- [x] **Step 8:** Commit: `git commit -am "feat: site shell — BaseHead SEO, layout, titlebar nav, terminal footer"`
 
 ### Task 5: TerminalWindow + homepage hero (bio.py)
 
