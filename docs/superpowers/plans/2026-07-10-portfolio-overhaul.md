@@ -559,7 +559,7 @@ import { SEO } from "../data/seo";
 
 **Interfaces — Produces:** `<TerminalWindow label="bio.py">` (slot). Max ONE per page (global constraint).
 
-- [ ] **Step 1:** Create `src/components/TerminalWindow.astro`:
+- [x] **Step 1:** Create `src/components/TerminalWindow.astro`:
 
 ```astro
 ---
@@ -583,7 +583,7 @@ const { label } = Astro.props;
 </style>
 ```
 
-- [ ] **Step 2:** Rewrite `src/pages/index.astro` hero (projects/timeline/skills sections land in Tasks 6–7):
+- [x] **Step 2:** Rewrite `src/pages/index.astro` hero (projects/timeline/skills sections land in Tasks 6–7):
 
 ```astro
 ---
@@ -631,9 +631,9 @@ const bioHtml = `<span class="syn-str syn-doc">"""${SITE.heroBio.doc}"""</span>\
 </style>
 ```
 
-- [ ] **Step 3:** Verify in dev: hero shows `$ whoami` (types once), name, amber tagline, one bio.py window with highlighted Python, intro paragraph, socials. Screenshot-check: all facts legible at every scroll position.
-- [ ] **Step 4:** Verify build + content grep: `npm run build && grep -c "ping-pong" dist/index.html` → 0; `grep -c "45–55% runtime" dist/index.html` → ≥1.
-- [ ] **Step 5:** Commit: `git commit -am "feat: homepage hero with bio.py terminal window"`
+- [x] **Step 3:** Verify in dev: hero shows `$ whoami` (types once), name, amber tagline, one bio.py window with highlighted Python, intro paragraph, socials. Screenshot-check: all facts legible at every scroll position.
+- [x] **Step 4:** Verify build + content grep: `npm run build && grep -c "ping-pong" dist/index.html` → 0; `grep -c "45–55% runtime" dist/index.html` → ≥1.
+- [x] **Step 5:** Commit: `git commit -am "feat: homepage hero with bio.py terminal window"`
 
 ### Task 6: Project cards + projects page
 
