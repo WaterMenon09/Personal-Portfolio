@@ -645,7 +645,7 @@ const bioHtml = `<span class="syn-str syn-doc">"""${SITE.heroBio.doc}"""</span>\
 - Consumes: `PROJECTS`, `Project` from `src/data/projects.ts`; `.pill`/`.badge` from global.css.
 - Produces: `<ProjectCard project={Project} />`; `.project-grid` class pattern reused on both pages.
 
-- [ ] **Step 1:** Create `src/components/ProjectCard.astro`:
+- [x] **Step 1:** Create `src/components/ProjectCard.astro`:
 
 ```astro
 ---
@@ -682,7 +682,7 @@ const { project: p } = Astro.props;
 </style>
 ```
 
-- [ ] **Step 2:** Add to `src/pages/index.astro` after the hero section:
+- [x] **Step 2:** Add to `src/pages/index.astro` after the hero section:
 
 ```astro
   <section class="section" aria-labelledby="projects-h">
@@ -701,7 +701,7 @@ with imports `import ProjectCard from "../components/ProjectCard.astro";` and `i
   @media (max-width: 639px) { .project-grid { grid-template-columns: 1fr; } }
 ```
 
-- [ ] **Step 3:** Create `src/pages/projects.astro` — same grid, standalone page:
+- [x] **Step 3:** Create `src/pages/projects.astro` — same grid, standalone page:
 
 ```astro
 ---
@@ -727,9 +727,9 @@ import { SEO } from "../data/seo";
 </style>
 ```
 
-- [ ] **Step 4:** Verify: dev — 6 cards, glyphs `⟳ ≋ σ ⊘ :) 0:0` render in JetBrains Mono (if `⟳`/`≋`/`⊘` show tofu boxes, swap to fallbacks `↻`, `~`, `×` in `projects.ts`); external links open GitHub in a new tab (this replaces the broken react-router pattern); hover lifts card and ambers the glyph; whole card clickable.
-- [ ] **Step 5:** Verify: `grep -c "MalwareSentinal" dist/projects/index.html` → ≥1 after `npm run build` (intentional slug preserved); `grep -ci "copilot" dist/projects/index.html` → 0.
-- [ ] **Step 6:** Commit: `git commit -am "feat: quest-style project cards and projects page"`
+- [x] **Step 4:** Verify: dev — 6 cards, glyphs `⟳ ≋ σ ⊘ :) 0:0` render in JetBrains Mono (if `⟳`/`≋`/`⊘` show tofu boxes, swap to fallbacks `↻`, `~`, `×` in `projects.ts`); external links open GitHub in a new tab (this replaces the broken react-router pattern); hover lifts card and ambers the glyph; whole card clickable.
+- [x] **Step 5:** Verify: `grep -c "MalwareSentinal" dist/projects/index.html` → ≥1 after `npm run build` (intentional slug preserved); `grep -ci "copilot" dist/projects/index.html` → 0.
+- [x] **Step 6:** Commit: `git commit -am "feat: quest-style project cards and projects page"`
 
 ### Task 7: XP experience timeline + skills groups
 
