@@ -1076,15 +1076,15 @@ Sitemap: https://watermenon09.github.io/Personal-Portfolio/sitemap-index.xml
 
 ### Task 14: Merge, deploy, post-deploy, log
 
-- [ ] **Step 1:** After user approval: `git checkout main && git merge --no-ff astro-rebuild -m "feat: Astro rebuild with corrected content and Readable Terminal theme"` and `git push origin main`. Watch the Actions run (`gh run watch`).
-- [ ] **Step 2:** Post-deploy checks:
+- [x] **Step 1:** After user approval: `git checkout main && git merge --no-ff astro-rebuild -m "feat: Astro rebuild with corrected content and Readable Terminal theme"` and `git push origin main`. Watch the Actions run (`gh run watch`).
+- [x] **Step 2:** Post-deploy checks:
   - `curl -s -o /dev/null -w "%{http_code}" https://watermenon09.github.io/Personal-Portfolio/` → 200 (repeat for `about/`, `projects/`, `contact/`, `resume.pdf`)
   - `curl -s -o /dev/null -w "%{http_code}" https://watermenon09.github.io/Personal-Portfolio/nonexistent` → 404 (styled page)
   - Paste the home URL into opengraph.xyz — card shows the terminal OG image.
   - GA4 realtime shows the visit.
-- [ ] **Step 3:** Resubmit sitemap in Google Search Console (user action if auth needed — hand over the URL `https://watermenon09.github.io/Personal-Portfolio/sitemap-index.xml`).
-- [ ] **Step 4:** Vault logging (per global CLAUDE.md): append worklog entry to `01-Projects/personal-portfolio/personal-portfolio.md` (Did/Decisions/Learned/Next/Links) and create decision notes `decisions/rebuild-cra-to-astro.md` + `decisions/readable-terminal-theme.md` from `_templates/decision.md`, linked from the hub's Key decisions. Note in the worklog that the portfolio now matches the 2026-07-06 corrected record.
-- [ ] **Step 5:** Delete the merged branch: `git branch -d astro-rebuild`.
+- [x] **Step 3:** Resubmit sitemap in Google Search Console (user action if auth needed — hand over the URL `https://watermenon09.github.io/Personal-Portfolio/sitemap-index.xml`).
+- [x] **Step 4:** Vault logging (per global CLAUDE.md): append worklog entry to `01-Projects/personal-portfolio/personal-portfolio.md` (Did/Decisions/Learned/Next/Links) and create decision notes `decisions/rebuild-cra-to-astro.md` + `decisions/readable-terminal-theme.md` from `_templates/decision.md`, linked from the hub's Key decisions. Note in the worklog that the portfolio now matches the 2026-07-06 corrected record.
+- [x] **Step 5:** Delete the merged branch: `git branch -d astro-rebuild`.
 
 ---
 
