@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TerminalWindow from "../components/TerminalWindow.astro";
+import Socials from "../components/Socials.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import WorkTimeline from "../components/WorkTimeline.astro";
+import SkillGroups from "../components/SkillGroups.astro";
+import { PROJECTS } from "../data/projects";
+import { SEO } from "../data/seo";
+import { SITE } from "../data/site";
+
+const bioLines = SITE.heroBio.fields
+  .map(([k, v]) => {
+    const pad = " ".repeat(Math.max(1, 9 - k.length));
+    const val = v.startsWith("[")
+      ? `<span class="syn-punct">[</span><span class="syn-str">${v.slice(1, -1)}</span><span class="syn-punct">]</span>`
+      : `<span class="syn-str">${v}</span>`;
+    return `<span class="syn-key">${k}</span>${pad}<span class="syn-punct">=</span> ${val}`;
+  })
+  .join("\n");
+const bioHtml = `<span class="syn-str syn-doc">"""${SITE.heroBio.doc}"""</span>\n\n${bioLines}`;
+---
+<BaseLayout title={SEO.home.title} description={SEO.home.description}>
+  <section class="hero">
+    <p class="whoami" aria-hidden="true"><span class="prompt-sign">$</span> <span class="typed cursor">whoami</span></p>
+    <h1>{SITE.name}</h1>
+    <p class="tagline">{SITE.tagline}</p>
+    <TerminalWindow label="bio.py">
+      <pre><code set:html={bioHtml} /></pre>
+    </TerminalWindow>
+    <p class="intro">{SITE.homeIntro}</p>
+    <Socials />
+  </section>
+  <section class="section" aria-labelledby="projects-h">
+    <h2 class="section-title" id="projects-h">projects</h2>
+    <div class="project-grid">
+      {PROJECTS.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+  <section class="section" aria-labelledby="exp-h">
+    <h2 class="section-title" id="exp-h">experience</h2>
+    <WorkTimeline />
+  </section>
+  <section class="section" aria-labelledby="skills-h">
+    <h2 class="section-title" id="skills-h">skills</h2>
+    <SkillGroups />
+  </section>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.name,
+    alternateName: SITE.fullName,
+    jobTitle: "AI/ML Engineer",
+    worksFor: { "@type": "Organization", name: "Cloudly IO" },
+    email: `mailto:${SITE.email}`,
+    url: "https://watermenon09.github.io/Personal-Portfolio/",
+    sameAs: [SITE.socials.github, SITE.socials.linkedin, SITE.socials.leetcode],
+  })} />
+</BaseLayout>
+<style>
+  .hero { padding-top: clamp(3rem, 7vh, 5rem); }
+  .whoami { font-family: var(--font-mono); color: var(--text-3); margin: 0 0 0.25rem; }
+  .prompt-sign { color: var(--accent); }
+  h1 { margin: 0 0 0.25rem; }
+  .tagline { font-family: var(--font-mono); color: var(--accent); margin: 0 0 2rem; }
+  pre { margin: 0; font-size: 0.9375rem; line-height: 1.7; overflow-x: auto; }
+  .intro { font-size: 1.125rem; line-height: 1.6; margin: 2rem 0 1.5rem; }
+  .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 1023px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 639px) { .project-grid { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: no-preference) {
+    .typed { display: inline-block; overflow: hidden; white-space: nowrap; width: 6.5ch; animation: type 0.7s steps(6, end); }
+    @keyframes type { from { width: 0; } to { width: 6.5ch; } }
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TerminalWindow from "../components/TerminalWindow.astro";
+import Socials from "../components/Socials.astro";
+import WorkTimeline from "../components/WorkTimeline.astro";
+import SkillGroups from "../components/SkillGroups.astro";
+import { Image } from "astro:assets";
+import { SEO } from "../data/seo";
+import { SITE } from "../data/site";
+import portrait from "../assets/images/about.jpg";
+---
+<BaseLayout title={SEO.about.title} description={SEO.about.description}>
+  <section class="section about">
+    <h1 class="section-title">about</h1>
+    <TerminalWindow label="about.md">
+      <div class="inner">
+        <Image src={portrait} alt="Menon Pranto" widths={[320, 480]} sizes="(max-width: 719px) 60vw, 220px" class="portrait" />
+        {SITE.aboutParagraphs.map((p) => <p>{p}</p>)}
+      </div>
+    </TerminalWindow>
+    <Socials />
+  </section>
+  <section class="section" aria-labelledby="exp-h">
+    <h2 class="section-title" id="exp-h">experience</h2>
+    <WorkTimeline />
+  </section>
+  <section class="section" aria-labelledby="skills-h">
+    <h2 class="section-title" id="skills-h">skills</h2>
+    <SkillGroups />
+  </section>
+</BaseLayout>
+<style>
+  .inner p { margin: 0 0 1rem; }
+  .inner p:last-child { margin-bottom: 0; }
+  .about :global(.portrait) { float: right; width: 220px; height: auto; margin: 0 0 1rem 1.5rem; border-radius: 6px; border: 1px solid var(--border); }
+  .about > :global(.socials) { margin-top: 1.5rem; }
+  @media (max-width: 719px) { .about :global(.portrait) { float: none; display: block; margin: 0 auto 1.25rem; } }
+</style>

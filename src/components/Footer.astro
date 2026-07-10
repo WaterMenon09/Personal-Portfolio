@@ -1,0 +1,18 @@
+---
+import Socials from "./Socials.astro";
+---
+<footer class="container">
+  <p class="prompt"><span class="user">menon@dhaka</span>:~$ echo "thanks for scrolling"</p>
+  <p class="echo">thanks for scrolling</p>
+  <Socials />
+  <p class="meta">© 2026 Menon Pranto · built with Astro · <a href="https://github.com/WaterMenon09/Personal-Portfolio" target="_blank" rel="noopener">view source</a></p>
+  <p class="exit" aria-hidden="true">[process exited — code 0]</p>
+</footer>
+<style>
+  footer { margin-top: clamp(4rem, 8vh, 6rem); padding-top: 2rem; padding-bottom: 2.5rem; border-top: 1px solid var(--border); font-size: 0.875rem; }
+  .prompt { font-family: var(--font-mono); color: var(--text-3); margin: 0; }
+  .user { color: var(--accent); }
+  .echo { font-family: var(--font-mono); color: var(--text-2); margin: 0.2rem 0 1.25rem; }
+  .meta { color: var(--text-3); margin: 1.25rem 0 0.5rem; }
+  .exit { font-family: var(--font-mono); color: var(--text-3); font-size: 0.75rem; margin: 0; }
+</style>

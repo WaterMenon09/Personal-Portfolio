@@ -1,0 +1,18 @@
+---
+import { SITE } from "../data/site";
+const entries = [
+  ["github", SITE.socials.github],
+  ["linkedin", SITE.socials.linkedin],
+  ["leetcode", SITE.socials.leetcode],
+  ["email", `mailto:${SITE.email}`],
+] as const;
+---
+<ul class="socials">
+  {entries.map(([label, href]) => (
+    <li><a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener">{label}</a></li>
+  ))}
+</ul>
+<style>
+  .socials { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; list-style: none; padding: 0; margin: 0; font-family: var(--font-mono); font-size: 0.875rem; }
+  .socials a::before { content: "↗ "; color: var(--text-3); }
+</style>

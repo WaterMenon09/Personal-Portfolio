@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { PROJECTS } from "../data/projects";
+import { SEO } from "../data/seo";
+---
+<BaseLayout title={SEO.projects.title} description={SEO.projects.description}>
+  <section class="section">
+    <h1 class="section-title">projects</h1>
+    <p class="lead">Production ML systems and personal builds — every metric on these cards is a real, verified number.</p>
+    <div class="project-grid">
+      {PROJECTS.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .lead { font-size: 1.125rem; margin-bottom: 2rem; }
+  .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 1023px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 639px) { .project-grid { grid-template-columns: 1fr; } }
+</style>

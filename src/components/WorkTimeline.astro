@@ -1,0 +1,48 @@
+---
+import { WORK, NEXT_NODE } from "../data/work";
+---
+<ol class="timeline">
+  {WORK.map((w) => (
+    <li class:list={["entry", { current: w.current }]}>
+      {w.flag && <p class="flag" aria-hidden="true"><span class="flag-icon">⚑</span> {w.flag}</p>}
+      <span class="node" aria-hidden="true"></span>
+      <div class="meta">
+        <span class="company">{w.company}</span>
+        <span class="role">{w.role}</span>
+        <span class="years">{w.start} – {w.end}</span>
+        {w.flag && <span class="visually-hidden">{w.flag}</span>}
+      </div>
+    </li>
+  ))}
+  <li class="entry next">
+    <span class="node hollow" aria-hidden="true"></span>
+    <div class="meta"><span class="role">{NEXT_NODE}</span></div>
+  </li>
+</ol>
+<style>
+  /* mobile-first: vertical rail */
+  .timeline { position: relative; display: grid; grid-template-columns: 1fr; gap: 1.5rem; list-style: none; margin: 0; padding: 0 0 0 1.25rem; }
+  .timeline::before { content: ""; position: absolute; left: 4px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--text-3), var(--accent) 78%, transparent 92%); }
+  .entry { position: relative; }
+  .flag { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-2); margin: 0.35rem 0 0; }
+  .flag-icon { color: var(--accent); }
+  .node { position: absolute; left: -1.25rem; top: 0.3rem; width: 10px; height: 10px; transform: rotate(45deg); background: var(--bg-0); border: 2px solid var(--accent); }
+  .current .node { background: var(--accent); }
+  .hollow { border-color: var(--text-3); border-style: dashed; }
+  .meta { display: flex; flex-direction: column; gap: 0.1rem; }
+  .company { font-family: var(--font-mono); font-weight: 600; color: var(--text-1); font-size: 0.875rem; }
+  .role { font-size: 0.875rem; color: var(--text-2); }
+  .years { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; color: var(--text-3); }
+  .next .role { font-family: var(--font-mono); color: var(--text-3); }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+  /* desktop: horizontal track, everything anchored to the line at bottom 4.5rem */
+  @media (min-width: 720px) {
+    .timeline { grid-template-columns: repeat(5, 1fr); gap: 0 1rem; padding: 0; }
+    .timeline::before { left: 0; right: 0; top: auto; bottom: calc(4.5rem - 1px); width: auto; height: 2px; background: linear-gradient(90deg, var(--text-3), var(--accent) 78%, transparent 92%); }
+    .entry { min-height: 12.5rem; }
+    .flag { position: absolute; bottom: 5.4rem; left: 0; margin: 0; }
+    .node { left: 2px; top: auto; bottom: calc(4.5rem - 5px); }
+    .meta { position: absolute; top: calc(100% - 3.6rem); left: 0; }
+  }
+</style>
