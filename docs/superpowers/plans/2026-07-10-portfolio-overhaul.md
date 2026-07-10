@@ -117,7 +117,7 @@ export const withBase = (path: string): string =>
 
 **Interfaces — Produces:** `SITE` (name/fullName/tagline/email/gaId/socials/heroBio/aboutParagraphs), `SEO` (per-page `{title, description}`), `PROJECTS: Project[]` with `interface Project { title: string; blurb: string; glyph: string; badge: { label: string; tone: "ok" | "warn" | "info" }; tags: string[]; href: string }`, `WORK: WorkEntry[]` with `interface WorkEntry { company: string; role: string; start: string; end: string; flag?: string; current?: boolean }`, `SKILLS: { group: string; items: string[] }[]`.
 
-- [ ] **Step 1:** Create `src/data/site.ts` (Facebook social intentionally dropped; LeetCode included everywhere Socials renders):
+- [x] **Step 1:** Create `src/data/site.ts` (Facebook social intentionally dropped; LeetCode included everywhere Socials renders):
 
 ```ts
 export const SITE = {
@@ -152,7 +152,7 @@ export const SITE = {
 } as const;
 ```
 
-- [ ] **Step 2:** Create `src/data/seo.ts`:
+- [x] **Step 2:** Create `src/data/seo.ts`:
 
 ```ts
 export const SEO = {
@@ -179,7 +179,7 @@ export const SEO = {
 } as const;
 ```
 
-- [ ] **Step 3:** Create `src/data/projects.ts` (Copilot card REMOVED; FER ADDED with confirmed public repo):
+- [x] **Step 3:** Create `src/data/projects.ts` (Copilot card REMOVED; FER ADDED with confirmed public repo):
 
 ```ts
 export interface Project {
@@ -249,7 +249,7 @@ export const PROJECTS: Project[] = [
 ];
 ```
 
-- [ ] **Step 4:** Create `src/data/work.ts`:
+- [x] **Step 4:** Create `src/data/work.ts`:
 
 ```ts
 export interface WorkEntry {
@@ -271,7 +271,7 @@ export const WORK: WorkEntry[] = [
 export const NEXT_NODE = "next: AI research lab";
 ```
 
-- [ ] **Step 5:** Create `src/data/skills.ts`:
+- [x] **Step 5:** Create `src/data/skills.ts`:
 
 ```ts
 export const SKILLS = [
@@ -283,8 +283,8 @@ export const SKILLS = [
 ] as const;
 ```
 
-- [ ] **Step 6:** Verify content rules: `grep -riE "ping-pong|copilot|meta-backed|nvidia" src/data/` → zero hits except the single allowed Copilot sentence in `site.ts` `aboutParagraphs[1]`. `npm run build` exits 0.
-- [ ] **Step 7:** Commit: `git commit -am "feat: add corrected content data modules (Copilot claim removed, runtime framing, FER added)"`
+- [x] **Step 6:** Verify content rules: `grep -riE "ping-pong|copilot|meta-backed|nvidia" src/data/` → zero hits except the single allowed Copilot sentence in `site.ts` `aboutParagraphs[1]`. `npm run build` exits 0.
+- [x] **Step 7:** Commit: `git commit -am "feat: add corrected content data modules (Copilot claim removed, runtime framing, FER added)"`
 
 ### Task 3: Design tokens + global styles
 
