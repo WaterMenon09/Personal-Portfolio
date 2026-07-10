@@ -1060,19 +1060,19 @@ Sitemap: https://watermenon09.github.io/Personal-Portfolio/sitemap-index.xml
 
 ### Task 13: Verification gate (BLOCKS merge — user checkpoint)
 
-- [ ] **Step 1:** `npm run build && npm run preview`, then against `http://localhost:4321/Personal-Portfolio/`:
+- [x] **Step 1:** `npm run build && npm run preview`, then against `http://localhost:4321/Personal-Portfolio/`:
   - Every nav link + resume link works; every project card opens the right GitHub repo in a new tab.
   - `view-source` all four pages: correct per-page title/description/canonical/OG.
   - Bogus path shows the 404.sh page with working links.
-- [ ] **Step 2:** Content-accuracy greps over `dist/` (these prove the corrections shipped):
+- [x] **Step 2:** Content-accuracy greps over `dist/` (these prove the corrections shipped):
   - `grep -ri "ping-pong" dist/ | grep -v ".map"` → 0 hits
   - `grep -ri "copilot" dist/ | grep -v ".map" | wc -l` → hits only from `dist/about/index.html` (the single sentence)
   - `grep -riE "meta-backed|nvidia" dist/ | grep -v ".map"` → 0 hits
   - `grep -ri "45–55% runtime\|45-55% runtime" dist/index.html` → ≥1
-- [ ] **Step 3:** `ls dist/_astro/*.js | wc -l` → 1; total JS < 5KB. Run Lighthouse (Chrome DevTools or `npx lighthouse http://localhost:4321/Personal-Portfolio/ --view`): targets ≥95 performance / accessibility / SEO. Fix regressions before proceeding.
-- [ ] **Step 4:** Reduced-motion pass (DevTools emulation): zero animation, all content visible. Keyboard pass: tab through home — skip link appears first, focus rings visible on all interactive elements.
+- [x] **Step 3:** `ls dist/_astro/*.js | wc -l` → 1; total JS < 5KB. Run Lighthouse (Chrome DevTools or `npx lighthouse http://localhost:4321/Personal-Portfolio/ --view`): targets ≥95 performance / accessibility / SEO. Fix regressions before proceeding.
+- [x] **Step 4:** Reduced-motion pass (DevTools emulation): zero animation, all content visible. Keyboard pass: tab through home — skip link appears first, focus rings visible on all interactive elements.
 - [ ] **Step 5:** Screenshot all four pages + 404 at 1280px and 375px (Playwright MCP) and show the user. **CHECKPOINT: user approves visuals before merge.**
-- [ ] **Step 6:** Commit any fixes: `git commit -am "fix: verification-gate fixes"`
+- [x] **Step 6:** Commit any fixes: `git commit -am "fix: verification-gate fixes"`
 
 ### Task 14: Merge, deploy, post-deploy, log
 
