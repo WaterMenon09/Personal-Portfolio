@@ -3,6 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TerminalWindow from "../components/TerminalWindow.astro";
 import Socials from "../components/Socials.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import WorkTimeline from "../components/WorkTimeline.astro";
+import SkillGroups from "../components/SkillGroups.astro";
 import { PROJECTS } from "../data/projects";
 import { SEO } from "../data/seo";
 import { SITE } from "../data/site";
@@ -34,6 +36,14 @@ const bioHtml = `<span class="syn-str syn-doc">"""${SITE.heroBio.doc}"""</span>\
     <div class="project-grid">
       {PROJECTS.map((p) => <ProjectCard project={p} />)}
     </div>
+  </section>
+  <section class="section" aria-labelledby="exp-h">
+    <h2 class="section-title" id="exp-h">experience</h2>
+    <WorkTimeline />
+  </section>
+  <section class="section" aria-labelledby="skills-h">
+    <h2 class="section-title" id="skills-h">skills</h2>
+    <SkillGroups />
   </section>
 </BaseLayout>
 <style>

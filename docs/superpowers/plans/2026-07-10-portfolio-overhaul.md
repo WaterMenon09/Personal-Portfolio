@@ -741,7 +741,7 @@ import { SEO } from "../data/seo";
 - Consumes: `WORK`, `NEXT_NODE`, `SKILLS`.
 - Produces: `<WorkTimeline />`, `<SkillGroups />` (also used on About in Task 8).
 
-- [ ] **Step 1:** Create `src/components/WorkTimeline.astro`:
+- [x] **Step 1:** Create `src/components/WorkTimeline.astro`:
 
 ```astro
 ---
@@ -792,7 +792,7 @@ import { WORK, NEXT_NODE } from "../data/work";
 
 (Positioning values are a starting point — refine by eye in dev so the diamonds sit on the track at all widths. That visual pass is part of this task, not deferred.)
 
-- [ ] **Step 2:** Create `src/components/SkillGroups.astro`:
+- [x] **Step 2:** Create `src/components/SkillGroups.astro`:
 
 ```astro
 ---
@@ -817,7 +817,7 @@ import { SKILLS } from "../data/skills";
 </style>
 ```
 
-- [ ] **Step 3:** Add to `src/pages/index.astro` after the projects section (with imports):
+- [x] **Step 3:** Add to `src/pages/index.astro` after the projects section (with imports):
 
 ```astro
   <section class="section" aria-labelledby="exp-h">
@@ -830,8 +830,8 @@ import { SKILLS } from "../data/skills";
   </section>
 ```
 
-- [ ] **Step 4:** Verify in dev at 1280px, 768px, 375px: horizontal timeline with gradient track and diamond nodes desktop; vertical rail mobile; `⚑ shipped:` flags only on the two Cloudly entries; dashed hollow node reads `next: AI research lab`; no stat bars anywhere; skills grouped under `# comment` labels.
-- [ ] **Step 5:** Commit: `git commit -am "feat: XP experience timeline and grouped skill pills"`
+- [x] **Step 4:** Verify in dev at 1280px, 768px, 375px: horizontal timeline with gradient track and diamond nodes desktop; vertical rail mobile; `⚑ shipped:` flags only on the two Cloudly entries; dashed hollow node reads `next: AI research lab`; no stat bars anywhere; skills grouped under `# comment` labels.
+- [x] **Step 5:** Commit: `git commit -am "feat: XP experience timeline and grouped skill pills"`
 
 ### Task 8: About, Contact, 404 pages
 

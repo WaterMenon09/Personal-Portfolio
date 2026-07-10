@@ -33,5 +33,9 @@ const links = [
   ul a { color: var(--text-2); }
   ul a:hover { color: var(--accent-2); text-decoration: none; }
   ul a[aria-current="page"] { color: var(--accent); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
-  @media (max-width: 480px) { .branch { display: none; } }
+  @media (max-width: 480px) {
+    .branch { display: none; }
+    nav { font-size: 0.8125rem; }
+    ul { gap: 0.75rem; }
+  }
 </style>
