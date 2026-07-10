@@ -293,7 +293,7 @@ export const SKILLS = [
 
 **Interfaces — Produces:** CSS custom properties (`--bg-0/1/2`, `--border`, `--border-bright`, `--text-1/2/3`, `--accent`, `--accent-2`, `--syn-*`, `--ok/--warn/--info/--danger`, `--font-mono`, `--font-sans`), classes `.container`, `.section`, `.section-title`, `.pill`, `.badge`, `.skip-link`, `.cursor`.
 
-- [ ] **Step 1:** Create `src/styles/global.css`:
+- [x] **Step 1:** Create `src/styles/global.css`:
 
 ```css
 :root {
@@ -363,8 +363,8 @@ code, pre { font-family: var(--font-mono); }
 .syn-punct { color: var(--syn-punct); }
 ```
 
-- [ ] **Step 2:** Verify: `npm run build` exits 0 (css not yet imported anywhere — that's Task 4).
-- [ ] **Step 3:** Commit: `git commit -am "feat: add Readable Terminal design tokens and global styles"`
+- [x] **Step 2:** Verify: `npm run build` exits 0 (css not yet imported anywhere — that's Task 4).
+- [x] **Step 3:** Commit: `git commit -am "feat: add Readable Terminal design tokens and global styles"`
 
 ### Task 4: Site shell — BaseHead, BaseLayout, NavBar, Footer, Socials
 
