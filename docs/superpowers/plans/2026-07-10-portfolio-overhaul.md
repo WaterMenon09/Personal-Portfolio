@@ -1071,7 +1071,7 @@ Sitemap: https://watermenon09.github.io/Personal-Portfolio/sitemap-index.xml
   - `grep -ri "45–55% runtime\|45-55% runtime" dist/index.html` → ≥1
 - [x] **Step 3:** `ls dist/_astro/*.js | wc -l` → 1; total JS < 5KB. Run Lighthouse (Chrome DevTools or `npx lighthouse http://localhost:4321/Personal-Portfolio/ --view`): targets ≥95 performance / accessibility / SEO. Fix regressions before proceeding.
 - [x] **Step 4:** Reduced-motion pass (DevTools emulation): zero animation, all content visible. Keyboard pass: tab through home — skip link appears first, focus rings visible on all interactive elements.
-- [ ] **Step 5:** Screenshot all four pages + 404 at 1280px and 375px (Playwright MCP) and show the user. **CHECKPOINT: user approves visuals before merge.**
+- [x] **Step 5:** Screenshot all four pages + 404 at 1280px and 375px (Playwright MCP) and show the user. **CHECKPOINT: user approves visuals before merge.**
 - [x] **Step 6:** Commit any fixes: `git commit -am "fix: verification-gate fixes"`
 
 ### Task 14: Merge, deploy, post-deploy, log
