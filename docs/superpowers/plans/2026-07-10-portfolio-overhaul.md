@@ -47,8 +47,8 @@
 
 **Interfaces — Produces:** `withBase(path: string): string`; base config consumed by every later task.
 
-- [ ] **Step 1:** Delete the CRA files listed above (`git rm -r src public/index.html public/404.html public/back-button.png`; keep the two JPGs staged where they are for now).
-- [ ] **Step 2:** Replace `package.json`:
+- [x] **Step 1:** Delete the CRA files listed above (`git rm -r src public/index.html public/404.html public/back-button.png`; keep the two JPGs staged where they are for now).
+- [x] **Step 2:** Replace `package.json`:
 
 ```json
 {
@@ -68,7 +68,7 @@
 
 Then: `npm install astro@^5 @astrojs/sitemap @fontsource-variable/jetbrains-mono @fontsource/atkinson-hyperlegible`
 
-- [ ] **Step 3:** Create `astro.config.mjs`:
+- [x] **Step 3:** Create `astro.config.mjs`:
 
 ```js
 import { defineConfig } from "astro/config";
@@ -81,7 +81,7 @@ export default defineConfig({
 });
 ```
 
-- [ ] **Step 4:** Create `tsconfig.json`:
+- [x] **Step 4:** Create `tsconfig.json`:
 
 ```json
 {
@@ -91,14 +91,14 @@ export default defineConfig({
 }
 ```
 
-- [ ] **Step 5:** Create `src/utils/url.ts`:
+- [x] **Step 5:** Create `src/utils/url.ts`:
 
 ```ts
 export const withBase = (path: string): string =>
   `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
 ```
 
-- [ ] **Step 6:** Create stub `src/pages/index.astro`:
+- [x] **Step 6:** Create stub `src/pages/index.astro`:
 
 ```astro
 ---
@@ -106,9 +106,9 @@ export const withBase = (path: string): string =>
 <html lang="en"><head><title>Menon Pranto</title></head><body><h1>scaffold ok</h1></body></html>
 ```
 
-- [ ] **Step 7:** Update `.gitignore`: replace `/build` line with `dist/` and `.astro/`.
-- [ ] **Step 8:** Verify: `npm run dev` → open `http://localhost:4321/Personal-Portfolio/` → "scaffold ok". `npm run build` → exits 0, `dist/index.html` exists. Expected: root `/` shows Astro's base-path notice (correct behavior).
-- [ ] **Step 9:** Commit: `git add -A && git commit -m "feat: replace CRA with Astro scaffold (site+base for GitHub Pages)"`
+- [x] **Step 7:** Update `.gitignore`: replace `/build` line with `dist/` and `.astro/`.
+- [x] **Step 8:** Verify: `npm run dev` → open `http://localhost:4321/Personal-Portfolio/` → "scaffold ok". `npm run build` → exits 0, `dist/index.html` exists. Expected: root `/` shows Astro's base-path notice (correct behavior).
+- [x] **Step 9:** Commit: `git add -A && git commit -m "feat: replace CRA with Astro scaffold (site+base for GitHub Pages)"`
 
 ### Task 2: Data modules — the corrected content
 
