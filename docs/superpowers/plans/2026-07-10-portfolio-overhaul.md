@@ -1054,9 +1054,9 @@ Sitemap: https://watermenon09.github.io/Personal-Portfolio/sitemap-index.xml
 - Modify: `.github/workflows/deploy.yml:37` (`path: build` → `path: dist`)
 - Modify: `README.md` (rewrite: Astro stack, dev commands, structure; keep MIT license + a one-line note that the repo's history began as a reactfolio fork)
 
-- [ ] **Step 1:** Edit `deploy.yml` upload step to `path: dist`. Nothing else changes (flow is already the modern Pages-artifact pipeline).
-- [ ] **Step 2:** Rewrite `README.md`: title, live URL, stack (Astro 5, static, GitHub Pages), `npm install` / `npm run dev` / `npm run build`, content-editing pointers (`src/data/*.ts`), license.
-- [ ] **Step 3:** Commit: `git commit -am "chore: point Pages deploy at dist, refresh README for Astro"`
+- [x] **Step 1:** Edit `deploy.yml` upload step to `path: dist`. Nothing else changes (flow is already the modern Pages-artifact pipeline).
+- [x] **Step 2:** Rewrite `README.md`: title, live URL, stack (Astro 5, static, GitHub Pages), `npm install` / `npm run dev` / `npm run build`, content-editing pointers (`src/data/*.ts`), license.
+- [x] **Step 3:** Commit: `git commit -am "chore: point Pages deploy at dist, refresh README for Astro"`
 
 ### Task 13: Verification gate (BLOCKS merge — user checkpoint)
 
