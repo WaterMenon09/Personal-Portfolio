@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Socials from "../components/Socials.astro";
+import { withBase } from "../utils/url";
+import { SEO } from "../data/seo";
+import { SITE } from "../data/site";
+---
+<BaseLayout title={SEO.contact.title} description={SEO.contact.description}>
+  <section class="section">
+    <h1 class="section-title">contact</h1>
+    <p class="lead">
+      The fastest way to reach me is email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+      I respond within 24 hours. AI/ML roles, Maveric, O-RAN, or anything on this site — all welcome.
+    </p>
+    <p>Prefer a document? <a href={withBase("resume.pdf")} download>Download my resume (PDF)</a>.</p>
+    <Socials />
+  </section>
+</BaseLayout>
+<style>
+  .lead { font-size: 1.125rem; }
+  section > :global(.socials) { margin-top: 2rem; }
+</style>

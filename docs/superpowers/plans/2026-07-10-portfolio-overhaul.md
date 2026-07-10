@@ -839,8 +839,8 @@ import { SKILLS } from "../data/skills";
 - Create: `src/pages/about.astro`, `src/pages/contact.astro`, `src/pages/404.astro`
 - Move: `public/about.jpg` → `src/assets/images/about.jpg`; `public/homepage.jpg` → `src/assets/images/homepage.jpg` (kept for possible reuse/OG source)
 
-- [ ] **Step 1:** `mkdir -p src/assets/images && git mv public/about.jpg public/homepage.jpg src/assets/images/`
-- [ ] **Step 2:** Create `src/pages/about.astro` (the one TerminalWindow on this page wraps the prose as `about.md`):
+- [x] **Step 1:** `mkdir -p src/assets/images && git mv public/about.jpg public/homepage.jpg src/assets/images/`
+- [x] **Step 2:** Create `src/pages/about.astro` (the one TerminalWindow on this page wraps the prose as `about.md`):
 
 ```astro
 ---
@@ -883,7 +883,7 @@ import portrait from "../assets/images/about.jpg";
 </style>
 ```
 
-- [ ] **Step 3:** Create `src/pages/contact.astro`:
+- [x] **Step 3:** Create `src/pages/contact.astro`:
 
 ```astro
 ---
@@ -910,7 +910,7 @@ import { SITE } from "../data/site";
 </style>
 ```
 
-- [ ] **Step 4:** Create `src/pages/404.astro` (the `ls` output lines ARE the nav):
+- [x] **Step 4:** Create `src/pages/404.astro` (the `ls` output lines ARE the nav):
 
 ```astro
 ---
@@ -937,8 +937,8 @@ import { withBase } from "../utils/url";
 </style>
 ```
 
-- [ ] **Step 5:** Verify: `npm run build` → `dist/404.html`, `dist/about/index.html`, `dist/contact/index.html` exist; 404's links contain `/Personal-Portfolio/` (`grep -c 'href="/Personal-Portfolio/' dist/404.html` → ≥4 — this fixes the old escape-the-basename bug); `grep -ci "copilot" dist/about/index.html` → exactly 1; portrait emitted as optimized asset in `dist/_astro/` (webp, well under 296KB).
-- [ ] **Step 6:** Commit: `git commit -am "feat: about, contact, and 404.sh pages"`
+- [x] **Step 5:** Verify: `npm run build` → `dist/404.html`, `dist/about/index.html`, `dist/contact/index.html` exist; 404's links contain `/Personal-Portfolio/` (`grep -c 'href="/Personal-Portfolio/' dist/404.html` → ≥4 — this fixes the old escape-the-basename bug); `grep -ci "copilot" dist/about/index.html` → exactly 1; portrait emitted as optimized asset in `dist/_astro/` (webp, well under 296KB).
+- [x] **Step 6:** Commit: `git commit -am "feat: about, contact, and 404.sh pages"`
 
 ### Task 9: Enhancements — konami egg + timeline reveal
 

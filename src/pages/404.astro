@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TerminalWindow from "../components/TerminalWindow.astro";
+import { withBase } from "../utils/url";
+---
+<BaseLayout title="404 | Menon Pranto" description="Page not found.">
+  <section class="wrap">
+    <TerminalWindow label="404.sh">
+      <pre class="shell"><code><span class="prompt">$</span> cd /that-page
+<span class="err">zsh: no such file or directory</span>
+<span class="prompt">$</span> ls ~/menon-pranto
+<a href={withBase("/")}>home/</a>   <a href={withBase("/about/")}>about.md</a>   <a href={withBase("/projects/")}>projects/</a>   <a href={withBase("/contact/")}>contact.sh</a>
+<span class="prompt">$</span> <span class="cursor"></span></code></pre>
+    </TerminalWindow>
+  </section>
+</BaseLayout>
+<style>
+  .wrap { max-width: 560px; margin: 0 auto; padding-top: clamp(4rem, 15vh, 8rem); }
+  .shell { margin: 0; line-height: 1.9; overflow-x: auto; }
+  .prompt { color: var(--accent); }
+  .err { color: var(--danger); }
+</style>
